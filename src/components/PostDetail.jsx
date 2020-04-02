@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAPI } from "../utilities/getAPI";
+import CommentList from "../components/CommentList.jsx";
 
 function PostDetail(props) {
 	const [post, setPost] = useState({});
@@ -24,6 +25,7 @@ function PostDetail(props) {
 				<i>Posted by {post.author}</i>
 			</p>
 			<p>{post.post}</p>
+			<CommentList match={props.match} />
 		</div>
 	);
 }
