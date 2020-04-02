@@ -19,14 +19,16 @@ function CommentList(props) {
 	const commentList = comments.map((comment, index) => {
 		return (
 			<div key={index}>
-				<p>{comment.comment}</p>
+				<p>
+					{comment.comment} <i>- {comment.comment_author}</i>
+				</p>
 			</div>
 		);
 	});
 
 	return (
 		<div>
-			<p>Comments:</p>
+			<h3>Comments:</h3>
 			{commentList}
 		</div>
 	);
