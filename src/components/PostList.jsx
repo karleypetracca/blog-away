@@ -6,7 +6,7 @@ function PostList() {
 
 	useEffect(() => {
 		const getPosts = async () => {
-			const url = "http://localhost:5000/api/posts";
+			const url = `http://localhost:5000/api/posts`;
 			const data = await getAPI(url);
 			setPosts(data);
 			console.log(data);
