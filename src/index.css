@@ -10,6 +10,7 @@
 	/* default sizing */
 	--lg-container: 1000px;
 	--sm-container: 400px;
+	--header-height: 50px;
 }
 
 *,
