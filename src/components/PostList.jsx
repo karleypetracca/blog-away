@@ -15,22 +15,22 @@ function PostList() {
 		getPosts();
 	}, []);
 
-	const postList = () => {
+	const postList = posts.map((post, index) => {
 		return (
-			<div>
-				<h3>{posts.title}</h3>
+			<div key={index}>
+				<h3>{post.title}</h3>
 				<p>
-					<e>Posted by {posts.author_id}</e>
+					<i>Posted by {post.author}</i>
 				</p>
-				<p>{posts.post}</p>
+				<p>{post.post}</p>
 			</div>
 		);
-	};
+	});
 
 	return (
 		<div>
 			<h2>List of posts</h2>
-			{postList()}
+			{postList}
 		</div>
 	);
 }
