@@ -4,6 +4,7 @@ import { getAPI } from "../utilities/getAPI";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 
+import CommentForm from "../components/CommentForm.jsx";
 import CommentList from "../components/CommentList.jsx";
 
 import styled from "styled-components";
@@ -19,7 +20,8 @@ const StyledHeader = styled.div`
 	}
 
 	.header {
-		width: var(--lg-container);
+		max-width: var(--lg-container);
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -39,38 +41,17 @@ const StyledPostDetail = styled.div`
 	background-color: var(--background);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	text-align: left;
 	width: 100vw;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding: 30px;
 
 	* {
 		margin: 10px 0;
-		width: var(--lg-container);
+		max-width: var(--lg-container);
 	}
 
 	* * {
 		width: 100%;
-	}
-`;
-
-const StyledCommentList = styled.div`
-	color: var(--dark);
-	text-align: left;
-	margin: 10px auto;
-
-	* {
-		margin: 10px 0;
-		width: var(--lg-container);
-	}
-
-	* * {
-		width: 100%;
-	}
-
-	h3 {
-		color: var(--primary);
 	}
 `;
 
@@ -104,9 +85,8 @@ function PostDetail(props) {
 				</p>
 				<p>{post.post}</p>
 			</StyledPostDetail>
-			<StyledCommentList>
-				<CommentList match={props.match} />
-			</StyledCommentList>
+			<CommentForm match={props.match} />
+			<CommentList match={props.match} />
 		</>
 	);
 }

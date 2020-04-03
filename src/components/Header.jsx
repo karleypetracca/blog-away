@@ -18,18 +18,18 @@ const StyledHeader = styled.nav`
 	top: 0;
 
 	.nav {
-		width: var(--lg-container);
+		width: 100%;
+		max-width: var(--lg-container);
 	}
 
 	.leftNav {
 		display: flex;
 		align-items: center;
 		margin: 0 auto;
-		width: auto;
 	}
 
 	.leftNav * {
-		width: auto;
+		margin-left: 5px;
 		margin-right: 5px;
 	}
 `;

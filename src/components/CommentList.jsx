@@ -1,5 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { getAPI } from "../utilities/getAPI";
+import styled from "styled-components";
+
+const StyledCommentList = styled.div`
+	color: var(--dark);
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: 10px auto;
+	max-width: var(--lg-container);
+	width: 100vw;
+	padding: 30px;
+
+	* {
+		margin: 10px 0;
+		width: 100%;
+		max-width: var(--lg-container);
+	}
+
+	* * {
+		width: 100%;
+	}
+
+	h3 {
+		color: var(--primary);
+	}
+`;
 
 function CommentList(props) {
 	const [comments, setComments] = useState([]);
@@ -27,10 +53,10 @@ function CommentList(props) {
 	});
 
 	return (
-		<div>
+		<StyledCommentList>
 			<h3>Comments:</h3>
 			{commentList}
-		</div>
+		</StyledCommentList>
 	);
 }
 

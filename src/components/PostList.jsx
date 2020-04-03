@@ -14,7 +14,7 @@ const StyledHero = styled.div`
 	width: 100vw;
 
 	* {
-		width: var(--lg-container);
+		max-width: var(--lg-container);
 	}
 
 	* * {
@@ -34,7 +34,7 @@ const StyledPostList = styled.div`
 	align-items: center;
 
 	* {
-		width: var(--lg-container);
+		max-width: var(--lg-container);
 		margin-top: 10px;
 	}
 
