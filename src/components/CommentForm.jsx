@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { getAPI } from "../utilities/getAPI";
 import styled from "styled-components";
+import { postAPI } from "../utilities/postAPI";
 
 const StyledHeader = styled.div`
 	color: var(--primary);
@@ -52,15 +52,8 @@ function CommentForm(props) {
 	};
 
 	const addComment = async (data) => {
-		const postData = await fetch("http://localhost:5000/post/comment", {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		});
-		const response = await postData;
+		const url = "http://localhost:5000/post/comment";
+		const response = await postAPI(url, data);
 		if (response.status === 200) {
 			alert("Comment Saved!");
 		}

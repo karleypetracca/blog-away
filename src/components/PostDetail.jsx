@@ -46,7 +46,7 @@ const StyledPostDetail = styled.div`
 	padding: 30px;
 
 	* {
-		margin: 10px 0;
+		margin: 10px auto;
 		max-width: var(--lg-container);
 	}
 
@@ -78,11 +78,13 @@ function PostDetail(props) {
 				</div>
 			</StyledHeader>
 			<StyledPostDetail>
-				<h3>{post.title}</h3>
-				<p>
-					<i>Posted by {post.author}</i>
-				</p>
-				<p>{post.post}</p>
+				<div>
+					<h3>{post.title}</h3>
+					<p>
+						<i>Posted by {post.author}</i>
+					</p>
+					<p>{post.post}</p>
+				</div>
 			</StyledPostDetail>
 			<CommentForm match={props.match} />
 			<CommentList match={props.match} key="1" />

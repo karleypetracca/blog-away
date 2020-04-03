@@ -45,6 +45,7 @@ const StyledPostList = styled.div`
 
 	h2 {
 		color: var(--primary);
+		padding: 10px;
 	}
 
 	.post {
