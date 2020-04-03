@@ -88,7 +88,7 @@ function PostDetail(props) {
 				</div>
 			</StyledPostDetail>
 			<CommentForm match={props.match} />
-			<CommentList match={props.match} key="1" />
+			<CommentList match={props.match} />
 		</>
 	);
 }
