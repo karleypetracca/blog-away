@@ -64,7 +64,6 @@ function PostDetail(props) {
 			const url = `http://localhost:5000/api/post/${post_id}`;
 			const data = await getAPI(url);
 			setPost(data);
-			console.log(data);
 		};
 
 		getPost();
@@ -86,7 +85,7 @@ function PostDetail(props) {
 				<p>{post.post}</p>
 			</StyledPostDetail>
 			<CommentForm match={props.match} />
-			<CommentList match={props.match} />
+			<CommentList match={props.match} key="1" />
 		</>
 	);
 }

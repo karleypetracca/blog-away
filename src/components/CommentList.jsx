@@ -36,7 +36,6 @@ function CommentList(props) {
 			const url = `http://localhost:5000/api/comments/${post_id}`;
 			const data = await getAPI(url);
 			setComments(data);
-			console.log(data);
 		};
 
 		getComments();
