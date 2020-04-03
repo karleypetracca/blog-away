@@ -16,21 +16,48 @@ const StyledHeader = styled.nav`
 	font-weight: bold;
 	position: sticky;
 	top: 0;
+	width: 100vw;
 
 	.nav {
 		width: 100%;
 		max-width: var(--lg-container);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.leftNav {
 		display: flex;
 		align-items: center;
-		margin: 0 auto;
+		justify-content: space-around;
 	}
 
 	.leftNav * {
 		margin-left: 5px;
 		margin-right: 5px;
+	}
+
+	.rightNav {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.rightNav button {
+		margin-left: 5px;
+		margin-right: 5px;
+		background-color: var(--secondary);
+		border-style: none;
+		padding: 0 10px;
+		height: var(--header-height);
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.rightNav button:hover {
+		cursor: pointer;
+		transition-duration: 0.3s;
+		background-color: var(--dark-secondary);
 	}
 `;
 
@@ -45,6 +72,11 @@ function Header() {
 					<p>
 						<a href="/">Blog Away</a>
 					</p>
+				</div>
+				<div className="rightNav">
+					<a href="/postnew">
+						<button>Post a Blog!</button>
+					</a>
 				</div>
 			</div>
 		</StyledHeader>

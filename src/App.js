@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import PostList from "./components/PostList.jsx";
 import PostDetail from "./components/PostDetail.jsx";
+import PostForm from "./components/PostForm.jsx";
 import styled from "styled-components";
 
 const StyledContent = styled.div`
@@ -23,6 +24,7 @@ function App() {
 				<StyledContent>
 					<Route path="/" exact component={PostList} />
 					<Route path="/post/:post_id?" exact component={PostDetail} />
+					<Route path="/postnew" exact component={PostForm} />
 				</StyledContent>
 			</Router>
 		</div>
