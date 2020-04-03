@@ -18,7 +18,6 @@ const StyledHeader = styled.div`
 	input {
 		padding: 5px;
 		margin: 5px;
-		border-radius: 4px;
 		min-height: 300px;
 	}
 
@@ -34,7 +33,7 @@ const StyledHeader = styled.div`
 
 function CommentForm(props) {
 	const [comment, setComment] = useState("");
-	const [author, setAuthor] = useState(0);
+	const [author_id, setAuthor] = useState(0);
 	const [post_id, setPostID] = useState(0);
 
 	const changeComment = (event) => {
@@ -45,10 +44,29 @@ function CommentForm(props) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(comment, author, post_id);
+		const data = { comment, author_id, post_id };
+		addComment(data);
 		setComment("");
 		setAuthor(0);
 		setPostID(0);
+	};
+
+	const addComment = async (data) => {
+		const postData = await fetch("http://localhost:5000/post/comment", {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+		const response = await postData;
+		if (response.status === 200) {
+			alert("Comment Saved!");
+		}
+		if (response.status !== 200) {
+			alert("Comment was unable to be saved. Please try again later.");
+		}
 	};
 
 	return (
