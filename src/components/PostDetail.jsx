@@ -48,6 +48,7 @@ const StyledPostDetail = styled.div`
 	* {
 		margin: 10px auto;
 		max-width: var(--lg-container);
+		width: 100%;
 	}
 
 	* * {

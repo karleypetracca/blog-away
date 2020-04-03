@@ -10,18 +10,23 @@ const StyledHeader = styled.div`
 	width: 100vw;
 	padding: 30px;
 
-	form {
-		display: flex;
-		align-items: center;
+	h3 {
+		margin-bottom: 10px;
 	}
 
-	input {
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	textarea {
 		padding: 5px;
 		margin: 5px;
-		min-height: 300px;
+		min-height: 100px;
 	}
 
 	button {
+		width: 150px;
 		padding: 10px;
 		margin: 5px;
 		border-style: none;

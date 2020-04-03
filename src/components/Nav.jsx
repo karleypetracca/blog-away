@@ -5,7 +5,7 @@ import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
 
-const StyledHeader = styled.nav`
+const StyledNav = styled.nav`
 	background-color: var(--primary);
 	color: var(--white);
 	height: var(--header-height);
@@ -63,7 +63,7 @@ const StyledHeader = styled.nav`
 
 function Header() {
 	return (
-		<StyledHeader>
+		<StyledNav>
 			<div className="nav">
 				<div className="leftNav">
 					<a href="/">
@@ -79,7 +79,7 @@ function Header() {
 					</a>
 				</div>
 			</div>
-		</StyledHeader>
+		</StyledNav>
 	);
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/Header.jsx";
+import Nav from "./components/Nav.jsx";
 import PostList from "./components/PostList.jsx";
 import PostDetail from "./components/PostDetail.jsx";
 import PostForm from "./components/PostForm.jsx";
@@ -19,7 +19,7 @@ const StyledContent = styled.div`
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			<Nav />
 			<Router>
 				<StyledContent>
 					<Route path="/" exact component={PostList} />
