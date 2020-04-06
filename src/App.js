@@ -4,6 +4,9 @@ import Nav from "./components/Nav.jsx";
 import PostList from "./components/PostList.jsx";
 import PostDetail from "./components/PostDetail.jsx";
 import PostForm from "./components/PostForm.jsx";
+import UserLogin from "./components/UserLogin.jsx";
+import UserSignup from "./components/UserSignup.jsx";
+
 import styled from "styled-components";
 
 const StyledContent = styled.div`
@@ -25,6 +28,8 @@ function App() {
 					<Route path="/" exact component={PostList} />
 					<Route path="/post/:post_id?" exact component={PostDetail} />
 					<Route path="/postnew" exact component={PostForm} />
+					<Route path="/user/login" exact component={UserLogin} />
+					<Route path="/user/signup" exact component={UserSignup} />
 				</StyledContent>
 			</Router>
 		</div>
