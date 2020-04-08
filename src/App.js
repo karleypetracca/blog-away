@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<Router>
+			<Router basename="/blog-away">
 				<StyledContent>
 					<Route path="/" exact component={PostList} />
 					<Route path="/post/:post_id?" exact component={PostDetail} />
