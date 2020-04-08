@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import PostList from "./components/PostList.jsx";
 import PostDetail from "./components/PostDetail.jsx";
@@ -24,7 +24,7 @@ function App() {
 		<div className="App">
 			<Nav />
 			<StyledContent>
-				<Router basename="/">
+				<Router>
 					<Route path="/" exact component={PostList} />
 					<Route path="/post/:post_id?" exact component={PostDetail} />
 					<Route path="/postnew" exact component={PostForm} />
