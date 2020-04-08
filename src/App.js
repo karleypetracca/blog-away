@@ -23,15 +23,15 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<Router basename="/blog-away">
-				<StyledContent>
+			<StyledContent>
+				<Router basename="/blog-away">
 					<Route path="/" exact component={PostList} />
 					<Route path="/post/:post_id?" exact component={PostDetail} />
 					<Route path="/postnew" exact component={PostForm} />
 					<Route path="/user/login" exact component={UserLogin} />
 					<Route path="/user/signup" exact component={UserSignup} />
-				</StyledContent>
-			</Router>
+				</Router>
+			</StyledContent>
 		</div>
 	);
 }
